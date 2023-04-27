@@ -166,28 +166,31 @@ h1 {
     ];
 
 
-  // Loop through the images array and create an img element for each one
-  images.forEach((image) => {
-    const img = document.createElement("img");
-    img.src = `/images/${image}`;
-    img.classList.add("w-1/2", "md:w-1/3", "lg:w-1/4", "object-cover", "gallery-item");
-    if (img.naturalHeight > 333 && img.naturalWidth > 250) {
-      img.classList.add("bottom-item");
-    }
-    gallery.appendChild(img);
-  });
+// Loop through the images array and create an img element for each one
+images.forEach((image) => {
+  const img = document.createElement("img");
+  img.src = `/images/${image}`;
+  img.classList.add("w-1/2", "md:w-1/3", "lg:w-1/4", "object-cover", "gallery-item");
+  img.setAttribute("loading", "lazy"); // Add loading="lazy" attribute
+  if (img.naturalHeight > 333 && img.naturalWidth > 250) {
+    img.classList.add("bottom-item");
+  }
+  gallery.appendChild(img);
+});
 
-  // Loop through the videos array and create a video element for each one
-  videos.forEach((video) => {
-    const vid = document.createElement("video");
-    vid.src = `/images/${video}`;
-    vid.classList.add("w-1/2", "md:w-1/3", "lg:w-1/4", "object-cover", "gallery-item");
-    vid.setAttribute("controls", "");
-    if (vid.videoHeight > 333 && vid.videoWidth > 250) {
-      vid.classList.add("bottom-item");
-    }
-    gallery.appendChild(vid);
-  });
+// Loop through the videos array and create a video element for each one
+videos.forEach((video) => {
+  const vid = document.createElement("video");
+  vid.src = `/images/${video}`;
+  vid.classList.add("w-1/2", "md:w-1/3", "lg:w-1/4", "object-cover", "gallery-item");
+  vid.setAttribute("controls", "");
+  vid.setAttribute("loading", "lazy"); // Add loading="lazy" attribute
+  if (vid.videoHeight > 333 && vid.videoWidth > 250) {
+    vid.classList.add("bottom-item");
+  }
+  gallery.appendChild(vid);
+});
+
     
   // Add a click event listener to each gallery item to play the video when clicked
   const galleryItems = document.querySelectorAll(".gallery-item");
