@@ -52,11 +52,23 @@
       color: #fff;
     }
 
-    @media screen and (max-width: 640px) {
-      .gallery-item {
-        width: 100%;
-      }
-    }
+    @media screen and (max-width: 532px) {
+  .gallery {
+    max-width: 100%;
+    min-width: 100%
+    padding: 10px;
+    display: grid
+  }
+
+  .gallery-item {
+    flex-bascis: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    max-height: auto;
+    min-height: auto;
+    margin: 0;
+  }
+}
 
     .box {
       width: 100%;
