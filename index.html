@@ -31,14 +31,13 @@ video {
       <ul class="flex space-x-4">
         <li><a href="#" class="hover:text-gray-500 text-white">Home</a></li>
         <li><a href="#" class="hover:text-gray-500 text-white">Celeb Leaks</a></li>
-        <li><a href="/otmegan.html" class="hover:text-gray-500 text-white">Overtime Megan Leaks</a></li>
-        <li><a href="/megnutt.html" class="hover:text-gray-500 text-white">Megnutt Leaked</a></li>
-        <li><a href="/corinnakoph.html" class="hover:text-gray-500 text-white">Corinna Koph Leaked</a></li>
-        <li><a href="/breckiehill.html" class="hover:text-gray-500 text-white">Breckie Hill Leaked</a></li>
-        <li><a href="/cavinder.html" class="hover:text-gray-500 text-white">Cavinder Twins Leaked</a></li>
+        <li><a href="/otmegan.html" class="hover:text-gray-500 text-white">Overtime Megan</a></li>
+        <li><a href="/megnutt.html" class="hover:text-gray-500 text-white">Megnutt</a></li>
+        <li><a href="/corinnakoph.html" class="hover:text-gray-500 text-white">Corinna Koph</a></li>
+        <li><a href="/breckiehill.html" class="hover:text-gray-500 text-white">Breckie Hill</a></li>
       </ul>
     </nav>
-    <button class="md:hidden text-gray-500 hover:text-white focus:outline-none focus:text-white" aria-label="Toggle menu">
+    <button class="md:hidden text-gray-500 hover:text-white focus:outline-none focus:text-white" aria-label="Toggle menu" onclick="toggleMenu()">
       <svg viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M2 5a1 1 0 0 1 1-1h14a1 1 0 0 1 0 2H3a1 1 0 0 1-1-1zM2 10a1 1 0 0 1 1-1h14a1 1 0 0 1 0 2H3a1 1 0 0 1-1-1zM3 15a1 1 0 1 1 0-2h14a1 1 0 1 1 0 2H3z"></path>
       </svg>
@@ -46,16 +45,35 @@ video {
   </div>
 
   <!-- Mobile menu, toggle classes based on menu state -->
-  <div class="md:hidden px-2 pt-2 pb-3 space-y-1 text-white" id="mobile-menu">
+  <div class="md:hidden px-2 pt-2 pb-3 space-y-1 text-white" id="mobile-menu" style="display:none;">
     <a href="#" class="hover:text-gray-500 block">Home</a>
     <a href="#" class="hover:text-gray-500 block">Celeb Leaks</a>
-    <a href="/otmegan.html" class="hover:text-gray-500 block">Overtime Megan Leaks</a>
-    <a href="/megnutt.html" class="hover:text-gray-500 block">Megnutt Leaked</a>
-    <a href="/corinnakoph.html" class="hover:text-gray-500 block">Corinna Koph Leaked</a>
-    <a href="/breckiehill.html" class="hover:text-gray-500 block">Breckie Hill Leaked</a>
-    <a href="/cavinder.html" class="hover:text-gray-500 block">Cavinder Twins Leaked</a>
+    <a href="/otmegan.html" class="hover:text-gray-500 block">Overtime Megan</a>
+    <a href="/megnutt.html" class="hover:text-gray-500 block">Megnutt</a>
+    <a href="/corinnakoph.html" class="hover:text-gray-500 block">Corinna Koph</a>
+    <a href="/breckiehill.html" class="hover:text-gray-500 block">Breckie Hill</a>
   </div>
-</header>
+      <script>
+function toggleMenu() {
+  var menu = document.getElementById("mobile-menu");
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
+}
+</script>
+<style>
+@media (max-width: 700px) {
+  nav {
+    display: none;
+  }
+  #mobile-menu {
+    display: block;
+  }
+}
+</style>
+    </header>
     
     <main class="container mx-auto mt-8">
       <h1 class="text-3xl font-bold mb-8">Celebrity Leaks on X-Leaks</h1>
