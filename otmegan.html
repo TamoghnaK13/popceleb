@@ -114,46 +114,52 @@
 </head>
 
 <body>
-  </div>
-  <header class="bg-gray-800 py-4">
-    <div class="container mx-auto px-4 flex justify-between items-center">
-      <a href="#" class="text-xl font-bold text-white">PopCeleb</a>
-      <nav class="hidden md:block">
-        <ul class="flex space-x-4">
-          <li><a href="#" class="hover:text-gray-500 text-white">Home</a></li>
-          <li><a href="/celebleaks.html" class="hover:text-gray-500 text-white">Celeb Leaks</a></li>
-          <li><a href="/otmegan.html" class="hover:text-gray-500 text-white">Overtime Megan</a></li>
-          <li><a href="/megnutt.html" class="hover:text-gray-500 text-white">Megnutt</a></li>
-          <li><a href="/corinnakoph.html" class="hover:text-gray-500 text-white">Corinna Koph</a></li>
-          <li><a href="/breckiehill.html" class="hover:text-gray-500 text-white">Breckie Hill</a></li>
-        </ul>
-      </nav>
-      <button class="md:hidden text-gray-500 hover:text-white focus:outline-none focus:text-white"
-        aria-label="Toggle menu" onclick="toggleMenu()">
-        <svg viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
-          <path fill-rule="evenodd" clip-rule="evenodd"
-            d="M2 5a1 1 0 0 1 1-1h14a1 1 0 0 1 0 2H3a1 1 0 0 1-1-1zM2 10a1 1 0 0 1 1-1h14a1 1 0 0 1 0 2H3a1 1 0 0 1-1-1zM3 15a1 1 0 1 1 0-2h14a1 1 0 1 1 0 2H3z">
-          </path>
-        </svg>
-      </button>
-    </div>
+    <header class="bg-gray-800 py-4">
+  <div class="container mx-auto px-4 flex items-center justify-between">
+    <a href="/" class="text-xl font-bold text-white">
+      <img src="/logos/logo-rectangle.png" alt="Logo" class="w-40 h-12">
+    </a>
 
-    <!-- Mobile menu, toggle classes based on menu state -->
-    <div class="md:hidden px-2 pt-2 pb-3 space-y-1 text-white" id="mobile-menu" style="display:none;">
-      <a href="#" class="hover:text-gray-500 block">Home</a>
-      <a href="#" class="hover:text-gray-500 block">Celeb Leaks</a>
-      <a href="/otmegan.html" class="hover:text-gray-500 block">Overtime Megan</a>
-      <a href="/megnutt.html" class="hover:text-gray-500 block">Megnutt</a>
-      <a href="/corinnakoph.html" class="hover:text-gray-500 block">Corinna Koph</a>
-      <a href="/breckiehill.html" class="hover:text-gray-500 block">Breckie Hill</a>
-    </div>
+    <!-- Desktop menu -->
+    <nav class="hidden md:block">
+      <ul class="flex space-x-4 text-white">
+        <li><a href="#" class="hover:text-gray-500">Home</a></li>
+        <li><a href="/celebleaks.html" class="hover:text-gray-500">Celeb Leaks</a></li>
+        <li><a href="/otmegan.html" class="hover:text-gray-500">Overtime Megan</a></li>
+        <li><a href="/megnutt.html" class="hover:text-gray-500">Megnutt</a></li>
+        <li><a href="/corinnakoph.html" class="hover:text-gray-500">Corinna Koph</a></li>
+        <li><a href="/breckiehill.html" class="hover:text-gray-500">Breckie Hill</a></li>
+      </ul>
+    </nav>
+
+    <!-- Mobile menu -->
+    <button class="md:hidden text-gray-500 hover:text-white focus:outline-none focus:text-white"
+      aria-label="Toggle menu" onclick="toggleMenu()">
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M2 5a1 1 0 0 1 1-1h14a1 1 0 0 1 0 2H3a1 1 0 0 1-1-1zM2 10a1 1 0 0 1 1-1h14a1 1 0 0 1 0 2H3a1 1 0 0 1-1-1zM3 15a1 1 0 1 1 0-2h14a1 1 0 1 1 0 2H3z">
+        </path>
+      </svg>
+    </button>
+
+  </div>
+
+  <!-- Mobile menu items -->
+  <div class="md:hidden px-4 py-2 bg-gray-800 text-white" id="mobile-menu" style="display:none;">
+    <a href="#" class="block mb-2 font-medium text-lg hover:text-gray-500">Home</a>
+    <a href="#" class="block mb-2 font-medium text-lg hover:text-gray-500">Celeb Leaks</a>
+    <a href="/otmegan.html" class="block mb-2 font-medium text-lg hover:text-gray-500">Overtime Megan</a>
+    <a href="/megnutt.html" class="block mb-2 font-medium text-lg hover:text-gray-500">Megnutt</a>
+    <a href="/corinnakoph.html" class="block mb-2 font-medium text-lg hover:text-gray-500">Corinna Koph</a>
+    <a href="/breckiehill.html" class="block font-medium text-lg hover:text-gray-500">Breckie Hill</a>
+  </div>
     <script>
-      function toggleMenu() {
+        function toggleMenu() {
   var menu = document.getElementById("mobile-menu");
-      if (menu.style.display === "block") {
-        menu.style.display = "none";
+        if (menu.style.display === "block") {
+          menu.style.display = "none";
   } else {
-        menu.style.display = "block";
+          menu.style.display = "block";
   }
 }
     </script>
